@@ -1,0 +1,15 @@
+<repositories version="1.0">
+	<repo quality="experimental" status="unofficial">
+		<name><![CDATA[halfmu]]></name>
+		<description lang="en"><![CDATA[Overlay for Personal Gentoo Extras]]></description>
+		<homepage>https://github.com/halfmu/gentoo-halfmu-overlay</homepage>
+		<owner type="person">
+			<email>qshou@halfmu.net</email>
+			<name><![CDATA[Qing Shou]]></name>
+		</owner>
+		<source type="git">git://github.com/halfmu/gentoo-halfmu-overlay.git</source>
+		<source type="git">https://github.com/halfmu/gentoo-halfmu-overlay.git</source>
+		<source type="git">git@github.com:halfmu/gentoo-halfmu-overlay.git</source>
+		<feed>https://github.com/halfmu/gentoo-halfmu-overlay/commits/master.atom</feed>
+	</repo>
+</repositories>
