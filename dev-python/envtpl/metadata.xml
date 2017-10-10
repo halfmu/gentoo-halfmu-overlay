@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer>
+		<email>andreas@jansson.me.uk</email>
+		<name>Andreas Jansson</name>
+	</maintainer>
+	<longdescription>Render jinja2 templates on the command line using shell environment variables</longdescription>
+</pkgmetadata>
