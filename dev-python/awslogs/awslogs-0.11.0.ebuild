@@ -7,26 +7,21 @@ PYTHON_COMPAT=( python2_7 python3_3 python3_4 python3_5 python3_6 )
 
 inherit distutils-r1
 
-DESCRIPTION="A CLI interface to Jinja2"
-HOMEPAGE="https://github.com/mattrobenolt/jinja2-cli"
+DESCRIPTION="awslogs is a simple command line tool to read aws cloudwatch logs."
+HOMEPAGE="https://github.com/jorgebastida/awslogs"
 SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="0"
 KEYWORDS="amd64"
-IUSE="yaml xml toml"
+IUSE=""
 
 CDEPEND="
-	yaml? (
-		dev-python/pyyaml[${PYTHON_USEDEP}]
-	)
-	xml? (
-		dev-python/xmltodict[${PYTHON_USEDEP}]
-	)
-	toml? (
-		dev-python/toml[${PYTHON_USEDEP}]
-	)
-	dev-python/jinja[${PYTHON_USEDEP}]
+	>=dev-python/boto3-1.2.1[${PYTHON_USEDEP}]
+	>=dev-python/jmespath-0.7.1[${PYTHON_USEDEP}]
+	<dev-python/jmespath-1.0.0[${PYTHON_USEDEP}]
+	>=dev-python/termcolor-1.1.0[${PYTHON_USEDEP}]
+	>=dev-python/python-dateutil-2.4.0[${PYTHON_USEDEP}]
 "
 DEPEND="
 	dev-python/setuptools[${PYTHON_USEDEP}]
@@ -34,8 +29,6 @@ DEPEND="
 RDEPEND="${CDEPEND}"
 
 python_prepare_all() {
-	sed -e s":\(tests_require=\):#\1:" -e s"/'tests':.*//" -i setup.py || die
-	rm -rf tests || die
 	distutils-r1_python_prepare_all
 }
 

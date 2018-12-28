@@ -7,26 +7,21 @@ PYTHON_COMPAT=( python2_7 python3_3 python3_4 python3_5 python3_6 )
 
 inherit distutils-r1
 
-DESCRIPTION="A CLI interface to Jinja2"
-HOMEPAGE="https://github.com/mattrobenolt/jinja2-cli"
+DESCRIPTION="A utility for managing secrets in the cloud using AWS KMS and DynamoDB"
+HOMEPAGE="https://github.com/fugue/credstash"
 SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="0"
 KEYWORDS="amd64"
-IUSE="yaml xml toml"
+IUSE="yaml"
 
 CDEPEND="
 	yaml? (
-		dev-python/pyyaml[${PYTHON_USEDEP}]
+		>=dev-python/pyyaml-3.10[${PYTHON_USEDEP}]
 	)
-	xml? (
-		dev-python/xmltodict[${PYTHON_USEDEP}]
-	)
-	toml? (
-		dev-python/toml[${PYTHON_USEDEP}]
-	)
-	dev-python/jinja[${PYTHON_USEDEP}]
+	>=dev-python/cryptography-2.1[${PYTHON_USEDEP}]
+	>=dev-python/boto3-1.1.1[${PYTHON_USEDEP}]
 "
 DEPEND="
 	dev-python/setuptools[${PYTHON_USEDEP}]
@@ -34,8 +29,6 @@ DEPEND="
 RDEPEND="${CDEPEND}"
 
 python_prepare_all() {
-	sed -e s":\(tests_require=\):#\1:" -e s"/'tests':.*//" -i setup.py || die
-	rm -rf tests || die
 	distutils-r1_python_prepare_all
 }
 
