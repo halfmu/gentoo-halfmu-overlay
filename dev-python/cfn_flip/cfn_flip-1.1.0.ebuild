@@ -23,6 +23,7 @@ CDEPEND="
 "
 DEPEND="
 	dev-python/setuptools[${PYTHON_USEDEP}]
+	dev-python/pytest-runner[${PYTHON_USEDEP}]
 "
 RDEPEND="${CDEPEND}"
 
