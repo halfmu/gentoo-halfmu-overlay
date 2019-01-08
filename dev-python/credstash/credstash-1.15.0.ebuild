@@ -22,6 +22,7 @@ CDEPEND="
 	)
 	>=dev-python/cryptography-2.1[${PYTHON_USEDEP}]
 	>=dev-python/boto3-1.1.1[${PYTHON_USEDEP}]
+	>=dev-python/nose-1.3.6[${PYTHON_USEDEP}]
 "
 DEPEND="
 	dev-python/setuptools[${PYTHON_USEDEP}]
