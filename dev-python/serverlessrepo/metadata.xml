@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer>
+		<email>aws-sam-developer@amazon.com</email>
+		<name>Amazon Web Services</name>
+	</maintainer>
+	<longdescription>A Python library with convenience helpers for working with the AWS Serverless Application Repository.</longdescription>
+</pkgmetadata>

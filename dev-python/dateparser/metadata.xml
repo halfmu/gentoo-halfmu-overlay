@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer>
+		<email>info@scrapinghub.com</email>
+		<name>Scrapinghub</name>
+	</maintainer>
+	<longdescription>Date parsing library designed to parse dates from HTML pages</longdescription>
+</pkgmetadata>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer>
+		<email>audreyr@gmail.com</email>
+		<name>Audrey Roy</name>
+	</maintainer>
+	<longdescription>A command-line utility that creates projects from project templates, e.g. creating a Python package project from a Python package project template.</longdescription>
+</pkgmetadata>
